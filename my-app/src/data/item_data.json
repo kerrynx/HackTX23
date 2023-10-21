@@ -1,0 +1,28 @@
+{
+    "DIY":[
+        {"Name":"Welcome Sign",
+            "Price":32,
+            "Hours":2,
+            "Materials":[
+                    {"Name":"Markers","Price":"5"},
+                    {"Name":"Glue", "Price":"10"}]},
+        {"Name":"Bar Menu + Drink Sign",
+            "Price":15,
+            "Hours":1,
+            "Materials":[
+                {"Name":"Markers","Price":"5"},
+                {"Name":"Glue", "Price":"10"}]}],
+    "BUY":[
+        {
+            "Name":"Cake Stand + Topper",
+            "Price":27,
+            "Hours":0
+        },
+        {
+            "Name":"Tablecloth",
+            "Price":40,
+            "Hours":0
+        }
+
+    ]
+}
