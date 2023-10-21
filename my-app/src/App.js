@@ -1,13 +1,14 @@
 import './App.css';
 import logo from './assets/penguin_logo.png';
 import { Routes, Route, Outlet, Link } from "react-router-dom";
+import TemporaryDrawer from './sideBar';
 import Title from './pages/Title';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<TemporaryDrawer />}>
           <Route index element={<Title />} />
           <Route path="about" element={<About />} />
           <Route path="dashboard" element={<Dashboard />} />

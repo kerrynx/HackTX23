@@ -13,6 +13,7 @@ import RoomServiceIcon from '@mui/icons-material/RoomService'; //reception
 import EmojiTransportationIcon from '@mui/icons-material/EmojiTransportation'; //sendoff
 import LocalFloristIcon from '@mui/icons-material/LocalFlorist'; //table decor
 import FavoriteIcon from '@mui/icons-material/Favorite'; //ceremony
+import { Routes, Route, Outlet, Link } from "react-router-dom";
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -36,66 +37,76 @@ export default function TemporaryDrawer() {
     >
       <List>
         {['Ceremony'].map((text) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <FavoriteIcon /> 
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
+          <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
+            <ListItem key={text}disablePadding>            
+                <ListItemButton>
+                    <ListItemIcon>
+                        <FavoriteIcon /> 
+                    </ListItemIcon>
+                    <ListItemText primary={text} />
+                </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
       <Divider />
       <List>
         {['Cocktail Hour'].map((text) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <LocalBarIcon /> 
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
+          <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
+            <ListItem key={text} disablePadding>
+                <ListItemButton>
+                <ListItemIcon>
+                    <LocalBarIcon /> 
+                </ListItemIcon>
+                <ListItemText primary={text} />
+                </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
       <Divider />
       <List>
-        {['Reception'].map((text) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <RoomServiceIcon /> 
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
+        {['Wedding Reception'].map((text) => (
+          <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
+            <ListItem key={text} disablePadding>
+                <ListItemButton>
+                <ListItemIcon>
+                    <RoomServiceIcon /> 
+                </ListItemIcon>
+                <ListItemText primary={text} />
+                </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
       <Divider />
       <List>
         {['Table Decor'].map((text) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <LocalFloristIcon /> 
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
+          <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
+            <ListItem key={text} disablePadding>
+                <ListItemButton>
+                <ListItemIcon>
+                    <LocalFloristIcon /> 
+                </ListItemIcon>
+                <ListItemText primary={text} />
+                </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
       <Divider />
       <List>
-        {['Sendoff'].map((text) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <EmojiTransportationIcon /> 
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
+        {['Getaway'].map((text) => (
+          <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
+            <ListItem key={text} disablePadding>
+                <ListItemButton>
+                <ListItemIcon>
+                    <EmojiTransportationIcon /> 
+                </ListItemIcon>
+                <ListItemText primary={text} />
+                </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
       <Divider />
@@ -116,6 +127,7 @@ export default function TemporaryDrawer() {
           </Drawer>
         </React.Fragment>
       ))}
+      <Outlet />
     </div>
   );
 }
