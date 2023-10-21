@@ -11,7 +11,7 @@
             "Hours":1,
             "Materials":[
                 {"Name":"Markers","Price":"5"},
-                {"Name":"Glue", "Price":"10"}]}],
+                {"Name":"Paper", "Price":"2"}]}],
     "BUY":[
         {
             "Name":"Cake Stand + Topper",
