@@ -57,9 +57,9 @@ export default function TemporaryDrawer() {
           <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
             <ListItem key={text}disablePadding style = {{backgroundColor: '#9caf88'}}>
                 <ListItemButton>
-                <ListItemIcon>
-                    <LocalBarIcon /> 
-                </ListItemIcon>
+                    <ListItemIcon>
+                        <LocalBarIcon /> 
+                    </ListItemIcon>
                 <ListItemText primary={text} />
                 </ListItemButton>
             </ListItem>
@@ -72,9 +72,9 @@ export default function TemporaryDrawer() {
           <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
             <ListItem key={text} disablePadding>
                 <ListItemButton>
-                <ListItemIcon>
-                    <RoomServiceIcon /> 
-                </ListItemIcon>
+                    <ListItemIcon>
+                        <RoomServiceIcon /> 
+                    </ListItemIcon>
                 <ListItemText primary={text} />
                 </ListItemButton>
             </ListItem>
@@ -87,9 +87,9 @@ export default function TemporaryDrawer() {
           <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
             <ListItem key={text} disablePadding>
                 <ListItemButton>
-                <ListItemIcon>
-                    <LocalFloristIcon /> 
-                </ListItemIcon>
+                    <ListItemIcon>
+                        <LocalFloristIcon /> 
+                    </ListItemIcon>
                 <ListItemText primary={text} />
                 </ListItemButton>
             </ListItem>
@@ -102,9 +102,9 @@ export default function TemporaryDrawer() {
           <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
             <ListItem key={text} disablePadding>
                 <ListItemButton>
-                <ListItemIcon>
-                    <EmojiTransportationIcon /> 
-                </ListItemIcon>
+                    <ListItemIcon>
+                        <EmojiTransportationIcon /> 
+                    </ListItemIcon>
                 <ListItemText primary={text} />
                 </ListItemButton>
             </ListItem>
@@ -119,7 +119,6 @@ export default function TemporaryDrawer() {
   return (
     <div >
       {['menu'].map((anchor) => (
-        
         <React.Fragment key={anchor} >
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
           <Drawer 
