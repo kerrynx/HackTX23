@@ -16,7 +16,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite'; //ceremony
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 
 export default function TemporaryDrawer() {
-  const [state, setState] = React.useState({
+  const [state, setState] = React.useState ({
     left: false,
   });
 
@@ -29,13 +29,15 @@ export default function TemporaryDrawer() {
   };
 
   const list = (anchor) => (
+    
     <Box
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+      style = {{backgroundColor: '#9caf88'}}
     >
-      <List>
+      <List style = {{backgroundColor: '#9caf88'}}>
         {['Ceremony'].map((text) => (
           <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
             <ListItem key={text}disablePadding>            
@@ -50,10 +52,10 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <List>
+      <List style = {{backgroundColor: '#9caf88'}} >
         {['Cocktail Hour'].map((text) => (
           <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
-            <ListItem key={text} disablePadding>
+            <ListItem key={text}disablePadding style = {{backgroundColor: '#9caf88'}}>
                 <ListItemButton>
                 <ListItemIcon>
                     <LocalBarIcon /> 
@@ -65,7 +67,7 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <List>
+      <List style = {{backgroundColor: '#9caf88'}}>
         {['Wedding Reception'].map((text) => (
           <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
             <ListItem key={text} disablePadding>
@@ -80,7 +82,7 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <List>
+      <List style = {{backgroundColor: '#9caf88'}}>
         {['Table Decor'].map((text) => (
           <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
             <ListItem key={text} disablePadding>
@@ -95,7 +97,7 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <List>
+      <List style = {{backgroundColor: '#9caf88'}}>
         {['Getaway'].map((text) => (
           <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
             <ListItem key={text} disablePadding>
@@ -110,19 +112,25 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
+      
     </Box>
   );
 
   return (
-    <div>
+    <div >
       {['menu'].map((anchor) => (
-        <React.Fragment key={anchor}>
+        
+        <React.Fragment key={anchor} >
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-          <Drawer
+          <Drawer 
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
-          >
+            PaperProps={{
+                sx: {
+                backgroundColor: "#9caf88"
+                }
+            }}>
             {list(anchor)}
           </Drawer>
         </React.Fragment>
