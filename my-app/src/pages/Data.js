@@ -1,11 +1,7 @@
 import './Data.css';
-import logo from '../assets/penguin_logo.png';
 import outdoorindoor from '../assets/outdoorindoor.png';
-import indoor from '../assets/indoor.png';
-import title from '../assets/titlepage.png';
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
-import { ButtonGroup } from '@mui/material';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import ReactDOM from 'react-dom/client';
 import TextField from '@mui/material/TextField';
@@ -15,18 +11,6 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
-
-// const { palette } = createTheme();
-// const { augmentColor } = palette;
-// const createColor = (mainColor) => augmentColor({ color: { main: mainColor } });
-// const theme = createTheme({
-//   palette: {
-//     buttonColor: createColor('#758467'),
-//     apple: createColor('#5DBA40'),
-//     steelBlue: createColor('#5C76B7'),
-//     violet: createColor('#BC00A3'),
-//   },
-// });
 function Data(){
     return (
         <div className="Data">
@@ -90,7 +74,7 @@ function Data(){
                 variant = "contained"
             > Indoor </Button>
             </Stack>
-            <Link to = "/about">
+            <Link to = "/cart">
             <Button
                 style={{
                     backgroundColor: "#758467"

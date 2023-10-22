@@ -4,6 +4,7 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 import TemporaryDrawer from './sideBar';
 import Title from './pages/Title';
 import Data from './pages/Data';
+import Cart from './pages/Cart';
 
 function App() {
   return (
@@ -11,9 +12,10 @@ function App() {
       <Routes>
         <Route path="/" element={<TemporaryDrawer />}>
           <Route index element={<Title />} />
-          <Route path="about" element={<About />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="data" element={<Data />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/data" element={<Data />} />
+          <Route path="/cart" element={<Cart />} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
@@ -46,6 +48,9 @@ function Layout() {
           </li>
           <li>
             <Link to="/data">Data</Link>
+          </li>
+          <li>
+            <Link to="/cart">Cart</Link>
           </li>
         </ul>
       </nav>

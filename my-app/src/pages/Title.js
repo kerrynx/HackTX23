@@ -14,30 +14,20 @@ import Stack from '@mui/material/Stack';
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-
-
 function Title() {
     return (
-        <Box sx={{ bgcolor: 'success.main' }}>
+        // <Box sx={{ bgcolor: 'success.main' }}>
         <div className="Title">
           <header className="Title-header">
             {/* <h1>Welcome to Wedbud</h1>
             <img src={logo} className="Penguin-logo" alt="logo" /> */}
             <img src={title} className="title" alt="title" />
             <p>
-            <Link to = '/data'>
+            <Link to = "/data">
             <Button
-                
-                // onClick={() => {
-                //     ShowRemaining();
-                    
-                // }}
                 style={{
                     backgroundColor: "#758467"
                 }}
-                // color = "buttonColor"
                 variant = "contained"
                 endIcon = {<KeyboardDoubleArrowRightIcon/>}
             > Get Started </Button>
@@ -45,7 +35,7 @@ function Title() {
             </p>
           </header>
         </div>
-        </Box>
+        // </Box>
       );
 }
 
