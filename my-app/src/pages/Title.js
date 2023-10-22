@@ -2,6 +2,7 @@ import './Title.css';
 import logo from '../assets/penguin_logo.png';
 import outdoorindoor from '../assets/outdoorindoor.png';
 import indoor from '../assets/indoor.png';
+import title from '../assets/titlepage.png';
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import { ButtonGroup } from '@mui/material';
@@ -31,8 +32,9 @@ function Title() {
         <Box sx={{ bgcolor: 'success.main' }}>
         <div className="Title">
           <header className="Title-header">
-            <h1>Welcome to Wedbud</h1>
-            <img src={logo} className="Penguin-logo" alt="logo" />
+            {/* <h1>Welcome to Wedbud</h1>
+            <img src={logo} className="Penguin-logo" alt="logo" /> */}
+            <img src={title} className="title" alt="title" />
             <p>
             <Button
                 onClick={() => {
