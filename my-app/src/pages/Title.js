@@ -11,10 +11,6 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
-
-
-
 function Title() {
     return (
         <Box sx={{ bgcolor: 'success.main' }}>
@@ -25,7 +21,7 @@ function Title() {
             <p>
             <Button
                 onClick={() => {
-                    showBudget();
+                    ShowRemaining();
                 }}
                 color = "success"
                 variant = "contained"
@@ -38,35 +34,75 @@ function Title() {
       );
 }
 
+function ShowRemaining() {
+    // const [budget, setBudget] = useState(' ');
+    // const [date, setDate] = useState(' ');
+    // const [hours, setHours] = useState(false);
+    // const [budgetError, setBudgetError] = useState(false);
+    // const [dateError, setDateError] = useState(false);
+    // const [hoursError, setHoursError] = useState(false);
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
 
-
-function showBudget() {
+    //     setBudgetError(false)
+    //     setDateError(false)
+    //     setHoursError(false)
+    //     if(budget === ' '){
+    //         setBudgetError(true)
+    //     }
+    //     if(date === ' '){
+    //         setDateError(true)
+    //     }
+    //     if(hours === ' '){
+    //         setHoursError(true)
+    //     }
+    // }
     const element = (
         <div className="Title">
           <header className="Title-header">
             <p>
+            {/* <form noValidate autoComplete = "off" onSubmit={handleSubmit}> */}
                 <p>
                 <h1>
                     Enter Budget Estimate:    
-                <TextField id="filled-basic" label="($1000-)" variant="filled" /> 
+                <TextField 
+                    // onChange={(e) => setBudget(e.target.value)}
+                    id="filled-basic" 
+                    label="($1000-)" 
+                    variant="filled" 
+                    required
+                    // error = {budgetError}
+                    /> 
                 </h1>
                 <h1>
                     Enter Wedding Day:    
                 
-                <TextField id="filled-basic" label="(MM/DD/YYYY)" variant="filled" /> 
+                <TextField 
+                    // onChange={(e) => setDate(e.target.value)}
+                    id="filled-basic" 
+                    label="(MM/DD/YYYY)" 
+                    variant="filled" 
+                    required
+                    // error = {dateError}
+                    />
                 </h1>
                 <h1>
                     How many hours per week are you willing to spend?    
-                
-                <TextField id="filled-basic" label="(1-24)" variant="filled" /> 
+                <TextField 
+                    // onChange={(e) => setHours(e.target.value)}
+                    id="filled-basic" 
+                    label="(0-24)" 
+                    variant="filled" 
+                    required
+                    // error = {hoursError}
+                    /> 
                 </h1>
                 </p>
                 <p>
                 <h1>
                     Choose wedding setting:
                 </h1>
-                <img src={outdoorindoor} className="Penguin-logo" alt="archPic" />
-                {/* <img src={indoor} className="Penguin-logo" alt="indoor" /> */}
+                <img src={outdoorindoor} className="inoutpic" alt="archPic" />
                 </p>
                 <Stack spacing = {60} direction = 'row' justifyContent= "center">
                 <Button
@@ -79,13 +115,11 @@ function showBudget() {
             > Indoor </Button>
             </Stack>
             <Button
-                // onClick={() => {
-                //     showBudget();
-                // }}
                 color = "success"
                 variant = "contained"
                 endIcon = {<KeyboardDoubleArrowRightIcon/>}
             > Done </Button>
+            {/* // </form> */}
             </p>
           </header>
         </div>
