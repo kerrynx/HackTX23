@@ -11,21 +11,20 @@ import { Typography } from "@mui/material";
 import { CardActions } from "@mui/material";
 import { Button } from "@mui/base";
 import { Grid } from "@mui/material";
+import Data from './pages/Data';
+import Cart from './pages/Cart';
+import CategorySelect from './pages/CategorySelect';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/">
-          <Route
-            index
-            element={
-              <>
-                <TemporaryDrawer />
-                <Title />
-              </>
-            }
-          />
+          <Route path="/" element={<TemporaryDrawer />}>
+          <Route index element={<Title />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/data" element={<Data />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="Categories/:id" element={<Category />} />
 
           {/* Using path="*"" means "match anything", so this route
@@ -37,6 +36,45 @@ function App() {
     </div>
   );
 }
+
+function Layout() {
+    return (
+      <div>
+        {/* A "layout route" is a good place to put markup you want to
+            share across all the pages on your site, like navigation. */}
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+            <li>
+              <Link to="/nothing-here">Nothing Here</Link>
+            </li>
+            <li>
+              <Link to="/data">Data</Link>
+            </li>
+            <li>
+              <Link to="/cart">Cart</Link>
+            </li>
+          </ul>
+        </nav>
+  
+        <hr />
+  
+        {/* An <Outlet> renders whatever child route is currently active,
+            so you can think about this <Outlet> as a placeholder for
+            the child routes we defined above. */}
+        <Outlet />
+      </div>
+    );
+  }
+  
 
 function Category() {
   let { id } = useParams();

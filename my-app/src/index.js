@@ -8,6 +8,8 @@ import Shopping from './pages/shopping.js'
 import Subtotal from './pages/shop2.js'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import TemporaryDrawer from './components/sideBar';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
