@@ -41,7 +41,7 @@ function App() {
             path="/cart"
             element={
               <>
-                <TemporaryDrawer />
+                <MenuBar />
                 <Shop />
               </>
             }
