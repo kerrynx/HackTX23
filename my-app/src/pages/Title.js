@@ -10,7 +10,22 @@ import ReactDOM from 'react-dom/client';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// const { palette } = createTheme();
+// const { augmentColor } = palette;
+// const createColor = (mainColor) => augmentColor({ color: { main: mainColor } });
+// const theme = createTheme({
+//   palette: {
+//     buttonColor: createColor('#758467'),
+//     apple: createColor('#5DBA40'),
+//     steelBlue: createColor('#5C76B7'),
+//     violet: createColor('#BC00A3'),
+//   },
+// });
+
+
 function Title() {
     return (
         <Box sx={{ bgcolor: 'success.main' }}>
@@ -23,7 +38,10 @@ function Title() {
                 onClick={() => {
                     ShowRemaining();
                 }}
-                color = "success"
+                style={{
+                    backgroundColor: "#758467"
+                }}
+                // color = "buttonColor"
                 variant = "contained"
                 endIcon = {<KeyboardDoubleArrowRightIcon/>}
             > Get Started </Button>
@@ -76,7 +94,6 @@ function ShowRemaining() {
                 </h1>
                 <h1>
                     Enter Wedding Day:    
-                
                 <TextField 
                     // onChange={(e) => setDate(e.target.value)}
                     id="filled-basic" 
@@ -102,20 +119,29 @@ function ShowRemaining() {
                 <h1>
                     Choose wedding setting:
                 </h1>
-                <img src={outdoorindoor} className="inoutpic" alt="archPic" />
+                <img src={outdoorindoor} className="inoutpic" alt="inoutpic" />
                 </p>
                 <Stack spacing = {60} direction = 'row' justifyContent= "center">
                 <Button
-                color = "success"
-                variant = "contained"
+                    style={{
+                        backgroundColor: "#758467"
+                    }}
+                    // color = "buttonColor"
+                    variant = "contained"
             > Outdoor </Button>
             <Button
-                color = "success"
+                style={{
+                    backgroundColor: "#758467"
+                }}
+                // color = "buttonColor"
                 variant = "contained"
             > Indoor </Button>
             </Stack>
             <Button
-                color = "success"
+                style={{
+                    backgroundColor: "#758467"
+                }}
+                // color = "buttonColor"
                 variant = "contained"
                 endIcon = {<KeyboardDoubleArrowRightIcon/>}
             > Done </Button>
