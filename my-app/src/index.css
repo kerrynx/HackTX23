@@ -20,6 +20,10 @@ body {
   font-family: "Waterfall";
   src: local("Waterfall"), url(./fonts/Waterfall-Regular.ttf) format("ttf");
 }
+@font-face {
+  font-family: "JosefinSlab";
+  src: local("JosefinSlab"), url(./fonts/JosefinSlab-Bold.ttf) format("ttf");
+}
 .diyElements {
   margin: "16px";
 }
@@ -29,7 +33,7 @@ body {
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace, "Bentham", "Waterfall";
+    monospace, "Bentham", "Waterfall", "JosefinSlab";
 
   /* @font-face {
         font-family: 'MyFont';
