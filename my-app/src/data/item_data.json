@@ -4,7 +4,8 @@
             "Price":32,
             "Hours":2,
             "Category": "Ceremony",
-            "url":"/assets/diy_wedding_sign.jpeg",
+            "url":"./assets/diy_wedding_sign.jpeg",
+            
             "Materials":[
                     {"Name":"Markers","Price":"5"},
                     {"Name":"Glue", "Price":"10"}]},
@@ -13,7 +14,7 @@
             "Price":15,
             "Hours":1,
             "Category": "CocktailHour",
-            "url":"/assets/diy_bar_menu.jpeg",
+            "url":"./assets/diy_bar_menu.jpeg",
             "Materials":[
                 {"Name":"Markers","Price":"5"},
                 {"Name":"Paper", "Price":"2"}]},
@@ -23,7 +24,7 @@
             "Hours":7,
             "Category": "TableDecor",
             
-            "url":"/assets/diy_placecards.jpeg",
+            "url":"./assets/diy_placecards.jpeg",
 
             "Materials":[
                 {"Name":"Cards","Price":"37"},
@@ -71,7 +72,7 @@
             "Price":65,
             "Hours":5,
             "Category": "CocktailHour",
-            "url":"../assets/diy_seat_chart.jpeg",
+            "url":"./assets/diy_seat_chart.jpeg",
             "Materials":[
                 {"Name":"Wood","Price":"20"},
                 {"Name":"Paint Marker", "Price": "5"},
@@ -108,55 +109,73 @@
             "Name":"Tablecloth",
             "Category": "TableDecor",
             "Price":40,
-            "Hours":0
+            "Hours":0,
+            "url":"./assets/buy_tablecloth.jpeg"
+
         },
         {
             "Name":"Flower Arch",
             "Category": "Ceremony",
             "Price":489,
-            "Hours":0
+            "Hours":0,
+            "url":"./assets/buy_flower_arch.jpeg"
+
         },
         {
             "Name":"Welcome Sign",
             "Price":60,
             "Hours":0,
-            "Category": "Ceremony"
+            "Category": "Ceremony",
+            "url":"./assets/buy_welcome_sign.jpeg"
+
         },
         {
             "Name":"Bar Menu + Drink Sign",
             "Price":47,
             "Hours":0,
-            "Category": "CocktailHour"
+            "Category": "CocktailHour",
+            "url":"./assets/buy_bar_menu.jpeg"
+
         },
         {  
             "Name":"Placecards",
             "Price":69,
             "Hours":0,
-            "Category": "TableDecor"
+            "Category": "TableDecor",
+            "url":"./assets/buy_placecards.jpeg"
+
         },
         {
             "Name":"Guest Book",
             "Price":48,
             "Hours":0,
-            "Category": "Ceremony"
+            "Category": "Ceremony",
+            "url":"./assets/buy_guest_book.jpeg"
+
         },
         {
             "Name":"Gifts Table + Decor",
             "Price":36,
             "Hours":0,
-            "Category": "Ceremony"
+            "Category": "Ceremony",
+            "url":"./assets/buy_gifts_table.jpeg"
+
         },
         {
             "Name":"Ribbon Wand Streamers",
             "Price":40,
             "Hours":0,
-            "Category": "Getaway"
+            "Category": "Getaway",
+            "url":"./assets/buy_ribbon_wand_streamers.jpeg"
+
         },
         {
             "Name":"Seating Chart Display",
             "Price":98,
             "Hours":0,
-            "Category": "CocktailHour"
+            "Category": "CocktailHour",
+            "url":"./assets/buy_seating_chart_display.jpeg"
+
         }
 
     ]

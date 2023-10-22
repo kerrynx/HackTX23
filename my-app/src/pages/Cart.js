@@ -1,19 +1,13 @@
 import CategoryTable from "./shop2.js";
-import React, { useState } from "react";
-
+import React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Link from "@mui/material/Link";
 import MenuBar from "../components/TopBar.js";
 
 import "../App.css";
 import "./Cart.css";
 const TAX_RATE = 0.08;
-
-function ccyFormat(num) {
-  return `${num.toFixed(2)}`;
-}
 
 function priceRow(qty, unit) {
   return qty * unit;

@@ -1,6 +1,6 @@
 import "./App.css";
 import "./index.css";
-import { Routes, Route, Outlet, Link, useParams } from "react-router-dom";
+import { Routes, Route, Link, useParams } from "react-router-dom";
 import TemporaryDrawer from "./components/sideBar";
 import Title from "./pages/Title";
 import MenuBar from "./components/TopBar";
@@ -15,9 +15,11 @@ import { Button } from "@mui/base";
 import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import { CardMedia } from "@mui/material";
+import Data from "./pages/Data";
+import { useState } from "react";
+import { useEffect } from "react";
 
 // import Shop from './pages/Shop';
-import CategorySelect from "./pages/CategorySelect";
 
 function App() {
   return (
@@ -42,6 +44,7 @@ function App() {
               </>
             }
           />
+          <Route path="/data" element={<Data />} />
           <Route path="Categories/:id" element={<Category />} />
           {/* <Route path="shop" element = {<Shop />} /> */}
 
@@ -52,44 +55,6 @@ function App() {
         </Route>
       </Routes>
       <Box sx={{ bgcolor: "#9caf88", height: "100vh" }} />
-    </div>
-  );
-}
-
-function Layout() {
-  return (
-    <div>
-      {/* A "layout route" is a good place to put markup you want to
-            share across all the pages on your site, like navigation. */}
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-          <li>
-            <Link to="/nothing-here">Nothing Here</Link>
-          </li>
-          <li>
-            <Link to="/data">Data</Link>
-          </li>
-          <li>
-            <Link to="/cart">Cart</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <hr />
-
-      {/* An <Outlet> renders whatever child route is currently active,
-            so you can think about this <Outlet> as a placeholder for
-            the child routes we defined above. */}
-      <Outlet />
     </div>
   );
 }
@@ -106,8 +71,14 @@ function Category() {
   if (!categories.includes(id)) {
     return <NoMatch />;
   }
+  return <GenerateCategoryPage id={id} />;
+}
+function GenerateCategoryPage(category) {
+  const [imageZeroSources, setImageZeroSources] = useState([]);
+
+  const [imageOneSources, setImageOneSources] = useState([]);
   const itemData = data;
-  data.BUY.sort((a, b) => {
+  itemData.BUY.sort((a, b) => {
     const nameA = a.Name.toUpperCase();
     const nameB = b.Name.toUpperCase();
 
@@ -119,7 +90,7 @@ function Category() {
     }
     return 0;
   });
-  data.DIY.sort((a, b) => {
+  itemData.DIY.sort((a, b) => {
     const nameA = a.Name;
     const nameB = b.Name;
 
@@ -135,11 +106,14 @@ function Category() {
   const diyList = itemData.DIY;
   const buyList = itemData.BUY;
   const sortedData = [];
+
   for (let i = 0; i < diyList.length; i++) {
-    if (diyList[i].Category === id) {
+    if (diyList[i].Category === category.id) {
       sortedData.push([buyList[i], diyList[i]]);
     }
   }
+  console.log(sortedData);
+
   const getMaterials = (props) => {
     let materials = props.Materials[0].Name;
     for (let i = 1; i < props.Materials.length; i++) {
@@ -147,15 +121,47 @@ function Category() {
     }
     return materials;
   };
-  console.log(sortedData);
+
+  useEffect(() => {
+    sortedData.forEach((data) => {
+      import(process.env.PUBLIC_URL + data[1].url)
+        .then((image) => {
+          setImageOneSources((prevImageSources) => [
+            ...prevImageSources,
+            image.default,
+          ]);
+        })
+        .catch((error) => {
+          console.error("Error loading image:", error);
+        });
+    });
+  }, [sortedData]);
+  useEffect(() => {
+    sortedData.forEach((data) => {
+      import(process.env.PUBLIC_URL + data[0].url)
+        .then((image) => {
+          setImageZeroSources((prevImageSources) => [
+            ...prevImageSources,
+            image.default,
+          ]);
+        })
+        .catch((error) => {
+          console.error("Error loading image:", error);
+        });
+    });
+  }, [sortedData]);
   const GenerateData = () => {
+    let i = 0;
     return sortedData.map((data) => (
       <>
-        {console.log(data[1].url)}
         <Grid container justifyContent="center" alignItems="center" spacing={3}>
           <Grid item xs={4} sx={{ margin: "8px" }}>
             <Card className="buyElements">
-              <CardMedia sx={{ height: 140 }} title="green iguana" />
+              <CardMedia
+                sx={{ height: 140 }}
+                image={imageZeroSources[i]}
+                title="green iguana"
+              />
               <CardContent justifyContent="center">
                 <Typography gutterBottom variant="h5" component="div">
                   {data[0].Name}
@@ -186,9 +192,10 @@ function Category() {
             <Card className="diyElements">
               <CardMedia
                 sx={{ height: 140 }}
-                image={data[1].url}
+                image={imageOneSources[i]} ///
                 title="green iguana"
               />
+
               <CardContent justifyContent="center">
                 <Typography gutterBottom variant="h5" component="div">
                   {data[1].Name}
@@ -208,31 +215,24 @@ function Category() {
             </Card>
           </Grid>
         </Grid>
+        {(i += 2)}
       </>
     ));
   };
-
+  if ((category = "CocktailHour")) {
+    category = "Cocktail Hour";
+  }
+  if ((category = "TableDecor")) {
+    category = "Table Decor";
+  }
+  if ((category = "WeddingReception")) {
+    category = "Wedding Reception";
+  }
   return (
     <>
-      <MenuBar id={id} />
+      <MenuBar id={category} />
       <GenerateData />
     </>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
   );
 }
 
