@@ -1,0 +1,24 @@
+.container {
+    background-color: #9CAF88;
+    font-family: "Bentham";
+    color: 'white'
+}
+
+.Cart {
+    font-family: "Bentham";
+    color: 'white'
+}
+
+.Cart-header{
+    font-family:"Bentham";
+    font-size: calc(8px + 2vmin);
+    color: rgb(255, 255, 255);
+}
+
+.row {
+    display: flex;
+  }
+  
+.column {
+    flex: 50%;
+}

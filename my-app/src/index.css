@@ -1,14 +1,40 @@
+.default {
+  background-color: #9caf88;
+}
+
 body {
   color: black;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: "Bentham";
+  src: local("Bentham"), url(./fonts/Bentham-Regular.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Waterfall";
+  src: local("Waterfall"), url(./fonts/Waterfall-Regular.ttf) format("ttf");
+}
+.diyElements {
+  margin: "16px";
+}
+
+.buyElements {
+  margin: "16px";
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace, "Bentham", "Waterfall";
+
+  /* @font-face {
+        font-family: 'MyFont';
+        src: local('MyFont'), url(./fonts/MyFont.woff) format('woff');
+        /* other formats include: 'woff2', 'truetype, 'opentype',
+                                  'embedded-opentype', and 'svg' 
+      } */
 }
