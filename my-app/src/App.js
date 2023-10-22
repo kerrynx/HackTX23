@@ -17,24 +17,6 @@ import Cart from './pages/Cart';
 import CategorySelect from './pages/CategorySelect';
 import Bentham from './fonts/Bentham-Regular.ttf';
 
-// const theme = createMuiTheme({
-//     typography: {
-//       fontFamily: 'Bentham',
-//     },
-//     components: {
-//       MuiCssBaseline: {
-//         styleOverrides: `
-//           @font-face {
-//             font-family: 'Bentham';
-//             font-style: normal;
-//             font-display: swap;
-//             font-weight: 400;
-//             src: local('Bentham'), local('Bentham-Regular');
-//           }
-//         `,
-//       },
-//     },
-//   });
 
 function App() {
   return (
