@@ -3,37 +3,146 @@
         {"Name":"Welcome Sign",
             "Price":32,
             "Hours":2,
+            "Category": "Ceremony",
             "Materials":[
                     {"Name":"Markers","Price":"5"},
                     {"Name":"Glue", "Price":"10"}]},
+
         {"Name":"Bar Menu + Drink Sign",
             "Price":15,
             "Hours":1,
+            "Category": "Cocktail Hour",
             "Materials":[
                 {"Name":"Markers","Price":"5"},
                 {"Name":"Paper", "Price":"2"}]},
+
         {"Name":"Placecards",
             "Price":40,
             "Hours":7,
+            "Category": "Table Decor",
             "Materials":[
                 {"Name":"Cards","Price":"37"},
-                {"Name":"Pen", "Price":"3"}]}
+                {"Name":"Pen", "Price":"3"}]},
+
+        {"Name":"Guest Book",
+            "Price":23,
+            "Hours":0,
+            "Category": "Ceremony",
+            "Materials":[
+                {"Name":"Scrapbook","Price":"20"},
+                {"Name":"Pen", "Price":"3"}]},
+        
+        {"Name":"Gifts Table + Decor",
+            "Price":90,
+            "Hours":1,
+            "Category": "Ceremony",
+            "Materials":[
+                {"Name":"Table","Price":"50"},
+                {"Name":"Flowers", "Price":"20"},
+                {"Name":"Vases", "Price": "20"}]},
+
+        {"Name":"Flower Arch",
+            "Price":230,
+            "Hours":20,
+            "Category": "Ceremony",
+            "Materials":[
+                {"Name":"Flowers","Price":"200"},
+                {"Name":"Rods", "Price":"20"},
+                {"Name":"Tape", "Price": "10"}]}, 
+        
+        {"Name":"Ribbon Wand Streamers",
+            "Price":10,
+            "Hours":7,
+            "Category": "Getaway",
+            "Materials":[
+                {"Name":"Wooden Sticks","Price":"5"},
+                {"Name":"Ribbon", "Price": "10"}]},
+        
+        {"Name":"Seating Chart Display",
+            "Price":65,
+            "Hours":5,
+            "Category": "Cocktail Hour",
+            "Materials":[
+                {"Name":"Wood","Price":"20"},
+                {"Name":"Paint Marker", "Price": "5"},
+                {"Name":"Paper cards", "Price": "40"}]},
+        
+        {"Name":"Cake Stand + Topper",
+            "Price":100,
+            "Hours":0,
+            "Category": "Wedding Reception",
+            "Materials":[
+                {"Name":"Cake Stand","Price":"50"},
+                {"Name":"Topper", "Price": "50"}]},    
+
+        {"Name":"Tablecloth",
+            "Price":15,
+            "Hours":0,
+            "Category": "Table Decor",
+            "Materials":[
+                {"Name":"Lace Tablecloth","Price":"5"},
+                {"Name":"Opaque Tablecloth", "Price": "10"}]}  
         ],
     "BUY":[
         {
             "Name":"Cake Stand + Topper",
-            "Price":27,
+            "Category": "Wedding Reception",
+            "Price":257,
             "Hours":0
         },
         {
             "Name":"Tablecloth",
+            "Category": "Table Decor",
             "Price":40,
             "Hours":0
         },
         {
             "Name":"Flower Arch",
+            "Category": "Ceremony",
             "Price":489,
             "Hours":0
+        },
+        {
+            "Name":"Welcome Sign",
+            "Price":60,
+            "Hours":0,
+            "Category": "Ceremony"
+        },
+        {
+            "Name":"Bar Menu + Drink Sign",
+            "Price":47,
+            "Hours":0,
+            "Category": "Cocktail Hour"
+        },
+        {  
+            "Name":"Placecards",
+            "Price":69,
+            "Hours":0,
+            "Category": "Table Decor"
+        },
+        {
+            "Name":"Guest Book",
+            "Price":48,
+            "Hours":0,
+            "Category": "Ceremony"
+        },
+        {
+            "Name":"Gifts Table + Decor",
+            "Price":36,
+            "Hours":0,
+            "Category": "Ceremony"
+        },
+        {
+            "Name":"Ribbon Wand Streamers",
+            "Price":40,
+            "Hours":0,
+            "Category": "Getaway"
+        },
+        {
+            "Name":"Seating Chart Display",
+            "Price":98,
+            "Hours":0,
+            "Category": "Cocktail Hour"
         }
 
     ]
