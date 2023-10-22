@@ -1,0 +1,16 @@
+.container {
+    background-color: #9CAF88;
+    font-family: "Times New Roman";
+}
+
+.Cart {
+    font-family: "Times New Roman";
+}
+
+.row {
+    display: flex;
+  }
+  
+.column {
+    flex: 50%;
+}

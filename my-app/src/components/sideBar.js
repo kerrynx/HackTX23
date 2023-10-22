@@ -39,7 +39,7 @@ export default function TemporaryDrawer() {
     >
       <List style = {{backgroundColor: '#9caf88'}}>
         {['Ceremony'].map((text) => (
-          <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
+          <Link to="/shop" style = {{ color: 'black', textDecoration: 'none'}}>
             <ListItem key={text}disablePadding>            
                 <ListItemButton>
                     <ListItemIcon>
