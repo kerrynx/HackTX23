@@ -7,7 +7,6 @@ import Title from './pages/Title.js'
 import Cart from './pages/Cart.js'
 import Subtotal from './pages/shop2.js'
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
 import TemporaryDrawer from './components/sideBar';
 
 
