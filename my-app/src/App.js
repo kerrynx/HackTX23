@@ -1,6 +1,7 @@
 import './App.css';
 import logo from './assets/penguin_logo.png';
 import { Routes, Route, Outlet, Link } from "react-router-dom";
+import Shop from './pages/Cart.js';
 import TemporaryDrawer from './sideBar';
 import Title from './pages/Title';
 
@@ -12,6 +13,7 @@ function App() {
           <Route index element={<Title />} />
           <Route path="about" element={<About />} />
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="shop" element = {<Shop />} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
