@@ -1,0 +1,23 @@
+.CategorySelect {
+    text-align: center;
+  }
+  
+  .CategorySelect-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  .CategorySelect-header {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+  }
+  
+  .CategorySelect-link {
+    color: #61dafb;
+  }
