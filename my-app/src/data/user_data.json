@@ -1,0 +1,11 @@
+{
+    "user_1":{
+        "budget":25000,
+        "month": 6,
+        "day": 20,
+        "year": 2024,
+        "hours/week": 4,
+        "setting": 0,
+        "category": 3
+    }
+}
