@@ -6,6 +6,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import './Cart.css';
+
+
 
 const TAX_RATE = 0.08;
 
@@ -26,24 +29,42 @@ function subtotal(items) {
   return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
 }
 
-const rows = [
-  createRow('Cocktail Hour', 100, 100.15),
-  createRow('Wedding Reception Table Decor', 10, 245.99),
-  createRow('Getaway', 2, 89.99),
-];
 
-const invoiceSubtotal = subtotal(rows);
-const invoiceTaxes = TAX_RATE * invoiceSubtotal;
-const invoiceTotal = invoiceTaxes + invoiceSubtotal;
 
-export default function CategoryTable() {
+
+
+export default function CategoryTable(cat_num) {
+  const item = require("../data/item_data.json");
+
+
+  var cat = cat_num == 0 ? "DIY": "BUY";
+
+  var rows = [
+    createRow(item.BUY[0].Name, 1, item.BUY[0].Price),
+    createRow(item.BUY[1].Name, 1, item.BUY[1].Price),
+    createRow(item.BUY[2].Name, 1, item.BUY[2].Price),
+  ];
+  var diyRows = [
+    createRow(item.DIY[0].Name, 1, item.DIY[0].Price),
+    createRow(item.DIY[1].Name, 1, item.DIY[1].Price),
+    createRow(item.DIY[2].Name, 1, item.DIY[2].Price)
+  ];
+  
+  if (cat_num == 0) {
+    rows = diyRows;
+  }
+  var invoiceSubtotal = subtotal(rows);
+
+  const invoiceTaxes = TAX_RATE * invoiceSubtotal;
+
   return (
-    <TableContainer component={Paper}>
+    <body>
+    <TableContainer className = 'Cart' component={Paper} style={{backgroundColor:'#9CAF88', color: 'white',}}  >
       <Table sx={{ minWidth: 700 }} aria-label="spanning table">
         <TableHead>
           <TableRow>
             <TableCell colSpan={3}>
-                CATEGORY
+                ITEM
             </TableCell>
             <TableCell align="right">PRICE</TableCell>
           </TableRow>
@@ -57,7 +78,7 @@ export default function CategoryTable() {
           ))}
           <TableRow>
             <TableCell rowSpan={3} />
-            <TableCell colSpan={2}>SUBTOTAL:</TableCell>
+            <TableCell colSpan={2}>{cat} SUBTOTAL:</TableCell>
             <TableCell align="right">{ccyFormat(invoiceSubtotal)}</TableCell>
           </TableRow>
           <TableRow>
@@ -68,5 +89,6 @@ export default function CategoryTable() {
         </TableBody>
       </Table>
     </TableContainer>
+    </body>
   );
 }

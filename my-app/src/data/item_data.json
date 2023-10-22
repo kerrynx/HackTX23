@@ -20,7 +20,14 @@
             "Category": "CocktailHour",
             "Materials":[
                 {"Name":"Markers","Price":"5"},
-                {"Name":"Paper", "Price":"2"}]}],
+                {"Name":"Paper", "Price":"2"}]},
+        {"Name":"Placecards",
+            "Price":40,
+            "Hours":7,
+            "Materials":[
+                {"Name":"Cards","Price":"37"},
+                {"Name":"Pen", "Price":"3"}]}
+        ],
     "BUY":[
         { "Name":"Welcome Sign",
             "Price":32,
@@ -46,9 +53,12 @@
         {
             "Name":"Tablecloth",
             "Price":40,
-            "Hours":0,
-            "Category": "TableDecor"
-
+            "Hours":0
+        },
+        {
+            "Name":"Flower Arch",
+            "Price":489,
+            "Hours":0
         }
 
     ]
