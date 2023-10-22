@@ -12,9 +12,9 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 function Data(){
-    // const [budget, setBudget] = useState('')
-    // const [date, setDate] = useState('')
-    // const [hours, setHours] = useState('')
+    const [budget, setBudget] = useState('')
+    const [date, setDate] = useState('')
+    const [hours, setHours] = useState('')
     // const [budgetError, setBudgetError] = useState(false)
     // const [dateError, setDateError] = useState(false)
     // const [hoursError, setHoursError] = useState(false)
@@ -22,14 +22,17 @@ function Data(){
     // const handleSubmit = (e) => {
     //     e.preventDefault()
 
-    //     if(budget === ''){
+    //     setBudgetError(false)
+    //     setDateError(false)
+    //     setHoursError(false)
+    //     if(budget == ''){
     //         setBudgetError(true)
     //     }
-    //     if(date === ''){
+    //     if(date == ''){
     //         setDateError(true)
     //     }
-    //     if(title === ''){
-    //         setTitleError(true)
+    //     if(hours == ''){
+    //         setHoursError(true)
     //     }
     // }
     return (
@@ -44,14 +47,16 @@ function Data(){
                     </h1>   
                 <TextField 
                     sx={{
-                        input: {color: "#FFFFFF"}
+                        input: {color: "#FFFFFF"},
                     }}
-                    // onChange={(e) => setBudget(e.target.value)}
+                    value ={budget}
+                    onChange={(e) => setBudget(e.target.value)}
                     id="filled-basic" 
+                    type = "number"
                     label="($1000-)" 
                     variant="filled" 
                     required
-                    // error = {budgetError}
+                    error = {!budget}
                     /> 
                 </Stack>
                 </p>
@@ -64,12 +69,14 @@ function Data(){
                     sx={{
                         input: {color: "#FFFFFF"}
                     }}
-                    // onChange={(e) => setDate(e.target.value)}
+                    value ={date}
+                    onChange={(e) => setDate(e.target.value)}
+                    type="date"
                     id="filled-basic" 
-                    label="(MM/DD/YYYY)" 
+                    // label="(MM/DD/YYYY)" 
                     variant="filled" 
                     required
-                    // error = {dateError}
+                    error = {!date}
                     />
                 </Stack>
                 </p>
@@ -82,12 +89,14 @@ function Data(){
                     sx={{
                         input: {color: "#FFFFFF"}
                     }}
-                    // onChange={(e) => setHours(e.target.value)}
+                    value ={hours}
+                    onChange={(e) => setHours(e.target.value)}
                     id="filled-basic" 
+                    type = "number"
                     label="(0-24)" 
                     variant="filled" 
                     required
-                    // error = {hoursError}
+                    error = {!hours}
                     /> 
                 </Stack>
                 </p>
@@ -102,14 +111,12 @@ function Data(){
                     style={{
                         backgroundColor: "#758467"
                     }}
-                    // color = "buttonColor"
                     variant = "contained"
                 > Outdoor </Button>
                 <Button
                     style={{
                         backgroundColor: "#758467"
                     }}
-                    // color = "buttonColor"
                     variant = "contained"
                 > Indoor </Button>
             </Stack>
@@ -118,12 +125,11 @@ function Data(){
                 style={{
                     backgroundColor: "#758467"
                 }}
-                // color = "buttonColor"
                 variant = "contained"
                 endIcon = {<KeyboardDoubleArrowRightIcon/>}
             > Done </Button>
             </Link>
-            {/* // </form> */}
+            {/* </form> */}
             </p>
           </header>
         </div>
