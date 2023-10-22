@@ -14,6 +14,7 @@ import { CardActions } from "@mui/material";
 import { Button } from "@mui/base";
 import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
+import { CardMedia } from "@mui/material";
 
 function App() {
   return (
@@ -64,25 +65,55 @@ function Category() {
     return <NoMatch />;
   }
   const itemData = data;
-  console.log(id);
+  data.BUY.sort((a, b) => {
+    const nameA = a.Name.toUpperCase();
+    const nameB = b.Name.toUpperCase();
+
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  });
+  data.DIY.sort((a, b) => {
+    const nameA = a.Name;
+    const nameB = b.Name;
+
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  });
+
+  const diyList = itemData.DIY;
+  const buyList = itemData.BUY;
   const sortedData = [];
-  for (let i = 0; i < itemData.DIY.length; i++) {
-    if (itemData.DIY[i].Category === id) {
-      sortedData.push([itemData.BUY[i], itemData.DIY[i]]);
+  for (let i = 0; i < diyList.length; i++) {
+    if (diyList[i].Category === id) {
+      sortedData.push([buyList[i], diyList[i]]);
     }
   }
+  const getMaterials = (props) => {
+    let materials = props.Materials[0].Name;
+    for (let i = 1; i < props.Materials.length; i++) {
+      materials += ", " + props.Materials[i].Name;
+    }
+    return materials;
+  };
   console.log(sortedData);
   const GenerateData = () => {
     return sortedData.map((data) => (
       <>
-        <Grid container justifyContent="center" spacing={3}>
+        {console.log(data[1].url)}
+        <Grid container justifyContent="center" alignItems="center" spacing={3}>
           <Grid item xs={4} sx={{ margin: "8px" }}>
-            <Card className="diyElements">
-              {/* <CardMedia
-              sx={{ height: 140 }}
-            image="/static/images/cards/contemplative-reptile.jpg"
-            title="green iguana"
-            /> */}
+            <Card className="buyElements">
+              <CardMedia sx={{ height: 140 }} title="green iguana" />
               <CardContent justifyContent="center">
                 <Typography gutterBottom variant="h5" component="div">
                   {data[0].Name}
@@ -91,27 +122,42 @@ function Category() {
                   {"Cost: $" + data[0].Price + " Time: " + data[0].Hours}
                 </Typography>
               </CardContent>
-              <CardActions justifyContent="center">
+              <CardActions>
                 <Button size="small">Add to Cart</Button>
               </CardActions>
             </Card>
           </Grid>
-          <Grid item xs={2}>
-            <div>xs=8</div>
+          <Grid item className="default" justifyContent="center">
+            <Card className="default">
+              <CardContent
+                justifyContent="center"
+                className="default"
+                textAlign="center"
+              >
+                <Typography gutterBottom variant="h5" component="div">
+                  Or
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
           <Grid item xs={4} sx={{ margin: "8px" }}>
-            <Card className="buyElements">
-              {/* <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
-      /> */}
+            <Card className="diyElements">
+              <CardMedia
+                sx={{ height: 140 }}
+                image={data[1].url}
+                title="green iguana"
+              />
               <CardContent justifyContent="center">
                 <Typography gutterBottom variant="h5" component="div">
                   {data[1].Name}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {"Cost: $" + data[1].Price + " Time: " + data[1].Hours}
+                  {"Cost: $" +
+                    data[1].Price +
+                    " Time: " +
+                    data[1].Hours +
+                    " Hours. Materials: " +
+                    getMaterials(data[1])}
                 </Typography>
               </CardContent>
               <CardActions justifyContent="center">

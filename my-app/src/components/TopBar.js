@@ -20,7 +20,6 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import rings from "../assets/wedding_bands.png";
-import { Container } from "@mui/system";
 export default function MenuBar(category) {
   const [state, setState] = React.useState(false);
 

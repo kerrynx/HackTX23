@@ -1,61 +1,162 @@
 {
     "DIY":[
-        {"Name":"DIY Welcome Sign",
+        {"Name":"Welcome Sign",
             "Price":32,
             "Hours":2,
             "Category": "Ceremony",
+            "url":"/assets/diy_wedding_sign.jpeg",
             "Materials":[
                     {"Name":"Markers","Price":"5"},
                     {"Name":"Glue", "Price":"10"}]},
-        {"Name":"DIY Welcome Sign 2",
-            "Price":32,
-            "Hours":2,
-            "Category": "Ceremony",
-            "Materials":[
-                {"Name":"Markers","Price":"5"},
-                {"Name":"Glue", "Price":"10"}]},           
-        {"Name":"DIY Bar Menu + Drink Sign",
+
+        {"Name":"Bar Menu + Drink Sign",
             "Price":15,
             "Hours":1,
             "Category": "CocktailHour",
+            "url":"/assets/diy_bar_menu.jpeg",
             "Materials":[
                 {"Name":"Markers","Price":"5"},
                 {"Name":"Paper", "Price":"2"}]},
+
         {"Name":"Placecards",
             "Price":40,
             "Hours":7,
+            "Category": "TableDecor",
+            
+            "url":"/assets/diy_placecards.jpeg",
+
             "Materials":[
                 {"Name":"Cards","Price":"37"},
-                {"Name":"Pen", "Price":"3"}]}
-        ],
-    "BUY":[
-        { "Name":"Welcome Sign",
-            "Price":32,
+                {"Name":"Pen", "Price":"3"}]},
+
+        {"Name":"Guest Book",
+            "Price":23,
             "Hours":0,
-            "Category": "Ceremony"
-        },
-        { "Name":"Welcome Sign 2",
-            "Price":32,
+            "Category": "Ceremony",
+            "url":"./assets/diy_guestbook.jpeg",
+            "Materials":[
+                {"Name":"Scrapbook","Price":"20"},
+                {"Name":"Pen", "Price":"3"}]},
+        
+        {"Name":"Gifts Table + Decor",
+            "Price":90,
+            "Hours":1,
+            "Category": "Ceremony",
+            "url":"./assets/diy_gifts_table.jpeg",
+            "Materials":[
+                {"Name":"Table","Price":"50"},
+                {"Name":"Flowers", "Price":"20"},
+                {"Name":"Vases", "Price": "20"}]},
+
+        {"Name":"Flower Arch",
+            "Price":230,
+            "Hours":20,
+            "Category": "Ceremony",
+            "url":"./assets/diy_flower_arch.jpeg",
+            "Materials":[
+                {"Name":"Flowers","Price":"200"},
+                {"Name":"Rods", "Price":"20"},
+                {"Name":"Tape", "Price": "10"}]}, 
+        
+        {"Name":"Ribbon Wand Streamers",
+            "Price":10,
+            "Hours":7,
+            "Category": "Getaway",
+            "url":"./assets/diy_ribbon_wand_streamers.jpeg",
+            "Materials":[
+                {"Name":"Wooden Sticks","Price":"5"},
+                {"Name":"Ribbon", "Price": "10"}]},
+        
+        {"Name":"Seating Chart Display",
+            "Price":65,
+            "Hours":5,
+            "Category": "CocktailHour",
+            "url":"../assets/diy_seat_chart.jpeg",
+            "Materials":[
+                {"Name":"Wood","Price":"20"},
+                {"Name":"Paint Marker", "Price": "5"},
+                {"Name":"Paper cards", "Price": "40"}]},
+        
+        {"Name":"Cake Stand + Topper",
+            "Price":100,
             "Hours":0,
-            "Category": "Ceremony"
-        },
-        {"Name":"Bar Menu + Drink Sign",
+            "Category": "WeddingReception",
+            "url":"./assets/diy_cake_stand.jpeg",
+            "Materials":[
+                {"Name":"Cake Stand","Price":"50"},
+                {"Name":"Topper", "Price": "50"}]},    
+
+        {"Name":"Tablecloth",
             "Price":15,
             "Hours":0,
-            "Category": "CocktailHour"
-        },
+            "Category": "TableDecor",
+            "url":"./assets/diy_tablecloth.jpeg",
+            "Materials":[
+                {"Name":"Lace Tablecloth","Price":"5"},
+                {"Name":"Opaque Tablecloth", "Price": "10"}]}  
+        ],
+    "BUY":[
         {
             "Name":"Cake Stand + Topper",
-            "Price":27,
+            "Category": "WeddingReception",
+            "Price":257,
             "Hours":0,
-            "Category": "WeddingReception"
+            "url":"./assets/buy_cake_stand.jpeg"
+
         },
         {
             "Name":"Tablecloth",
+            "Category": "TableDecor",
             "Price":40,
+            "Hours":0
+        },
+        {
+            "Name":"Flower Arch",
+            "Category": "Ceremony",
+            "Price":489,
+            "Hours":0
+        },
+        {
+            "Name":"Welcome Sign",
+            "Price":60,
+            "Hours":0,
+            "Category": "Ceremony"
+        },
+        {
+            "Name":"Bar Menu + Drink Sign",
+            "Price":47,
+            "Hours":0,
+            "Category": "CocktailHour"
+        },
+        {  
+            "Name":"Placecards",
+            "Price":69,
             "Hours":0,
             "Category": "TableDecor"
-
+        },
+        {
+            "Name":"Guest Book",
+            "Price":48,
+            "Hours":0,
+            "Category": "Ceremony"
+        },
+        {
+            "Name":"Gifts Table + Decor",
+            "Price":36,
+            "Hours":0,
+            "Category": "Ceremony"
+        },
+        {
+            "Name":"Ribbon Wand Streamers",
+            "Price":40,
+            "Hours":0,
+            "Category": "Getaway"
+        },
+        {
+            "Name":"Seating Chart Display",
+            "Price":98,
+            "Hours":0,
+            "Category": "CocktailHour"
         }
 
     ]
