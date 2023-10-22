@@ -94,7 +94,7 @@ function Data(){
                 <TextField 
                     sx={{
                         input: {color: "#FFFFFF"},
-                        width: 75
+                        width: 80
                     }}
                     InputProps={{
                         inputProps: { 
