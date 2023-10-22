@@ -3,6 +3,7 @@ import logo from './assets/penguin_logo.png';
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import TemporaryDrawer from './sideBar';
 import Title from './pages/Title';
+import CategorySelect from './pages/CategorySelect'
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<TemporaryDrawer />}>
           <Route index element={<Title />} />
-          <Route path="about" element={<About />} />
+          <Route path="about" element={<CategorySelect />} />
           <Route path="dashboard" element={<Dashboard />} />
 
           {/* Using path="*"" means "match anything", so this route
