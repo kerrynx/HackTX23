@@ -11,7 +11,7 @@ import { BrowserRouter } from 'react-router-dom';
 import TemporaryDrawer from './components/sideBar';
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
