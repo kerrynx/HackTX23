@@ -1,27 +1,54 @@
 {
     "DIY":[
-        {"Name":"Welcome Sign",
+        {"Name":"DIY Welcome Sign",
             "Price":32,
             "Hours":2,
+            "Category": "Ceremony",
             "Materials":[
                     {"Name":"Markers","Price":"5"},
                     {"Name":"Glue", "Price":"10"}]},
-        {"Name":"Bar Menu + Drink Sign",
+        {"Name":"DIY Welcome Sign 2",
+            "Price":32,
+            "Hours":2,
+            "Category": "Ceremony",
+            "Materials":[
+                {"Name":"Markers","Price":"5"},
+                {"Name":"Glue", "Price":"10"}]},           
+        {"Name":"DIY Bar Menu + Drink Sign",
             "Price":15,
             "Hours":1,
+            "Category": "CocktailHour",
             "Materials":[
                 {"Name":"Markers","Price":"5"},
                 {"Name":"Paper", "Price":"2"}]}],
     "BUY":[
+        { "Name":"Welcome Sign",
+            "Price":32,
+            "Hours":0,
+            "Category": "Ceremony"
+        },
+        { "Name":"Welcome Sign 2",
+            "Price":32,
+            "Hours":0,
+            "Category": "Ceremony"
+        },
+        {"Name":"Bar Menu + Drink Sign",
+            "Price":15,
+            "Hours":0,
+            "Category": "CocktailHour"
+        },
         {
             "Name":"Cake Stand + Topper",
             "Price":27,
-            "Hours":0
+            "Hours":0,
+            "Category": "WeddingReception"
         },
         {
             "Name":"Tablecloth",
             "Price":40,
-            "Hours":0
+            "Hours":0,
+            "Category": "TableDecor"
+
         }
 
     ]

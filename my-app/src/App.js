@@ -1,20 +1,31 @@
-import './App.css';
-import logo from './assets/penguin_logo.png';
+import "./App.css";
 import { Routes, Route, Outlet, Link, useParams } from "react-router-dom";
-import TemporaryDrawer from './components/sideBar';
-import Title from './pages/Title';
-import MenuBar from './components/TopBar';
-import * as React from 'react';
-import data from './data/item_data.json'
+import TemporaryDrawer from "./components/sideBar";
+import Title from "./pages/Title";
+import MenuBar from "./components/TopBar";
+import * as React from "react";
+import data from "./data/item_data.json";
+import { Card } from "@mui/material";
+import { CardContent } from "@mui/material";
+import { Typography } from "@mui/material";
+import { CardActions } from "@mui/material";
+import { Button } from "@mui/base";
+import { Grid } from "@mui/material";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<TemporaryDrawer />}>
-          <Route index element={<Title />} />
-          <Route path="about" element={<About />} />
-          <Route path="dashboard" element={<Dashboard />} />
+        <Route path="/">
+          <Route
+            index
+            element={
+              <>
+                <TemporaryDrawer />
+                <Title />
+              </>
+            }
+          />
           <Route path="Categories/:id" element={<Category />} />
 
           {/* Using path="*"" means "match anything", so this route
@@ -27,55 +38,86 @@ function App() {
   );
 }
 
-function Category(){
-  let {id} = useParams();
-  const categories = ["Ceremony","CocktailHour", "Getaway", "TableDecor", "WeddingReception"];
-  if(!categories.includes(id)){
-    return(<NoMatch/>);
+function Category() {
+  let { id } = useParams();
+  const categories = [
+    "Ceremony",
+    "CocktailHour",
+    "Getaway",
+    "TableDecor",
+    "WeddingReception",
+  ];
+  if (!categories.includes(id)) {
+    return <NoMatch />;
   }
-  const itemData = data
-  
-  return (
+  const itemData = data;
+  console.log(id);
+  const sortedData = [];
+  for (let i = 0; i < itemData.DIY.length; i++) {
+    if (itemData.DIY[i].Category === id) {
+      sortedData.push([itemData.BUY[i], itemData.DIY[i]]);
+    }
+  }
+  console.log(sortedData);
+  const GenerateData = () => {
+    return sortedData.map((data) => (
+      <>
+        <Grid container justifyContent="center" spacing={3}>
+          <Grid item xs={3}>
+            <Card>
+              {/* <CardMedia
+              sx={{ height: 140 }}
+            image="/static/images/cards/contemplative-reptile.jpg"
+            title="green iguana"
+            /> */}
+              <CardContent justifyContent="center">
+                <Typography gutterBottom variant="h5" component="div">
+                  {data[0].Name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {"Cost: $" + data[0].Price + " Time: " + data[0].Hours}
+                </Typography>
+              </CardContent>
+              <CardActions justifyContent="center">
+                <Button size="small">Add to Cart</Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          <Grid item xs={3}>
+            <div>xs=8</div>
+          </Grid>
+          <Grid item xs={3}>
+            <Card>
+              {/* <CardMedia
+        sx={{ height: 140 }}
+        image="/static/images/cards/contemplative-reptile.jpg"
+        title="green iguana"
+      /> */}
+              <CardContent justifyContent="center">
+                <Typography gutterBottom variant="h5" component="div">
+                  {data[1].Name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {"Cost: $" + data[1].Price + " Time: " + data[1].Hours}
+                </Typography>
+              </CardContent>
+              <CardActions justifyContent="center">
+                <Button size="small">Add to Cart</Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        </Grid>
+      </>
+    ));
+  };
 
-  
-    <MenuBar id ={id}/>
+  return (
+    <>
+      <MenuBar id={id} />
+      <GenerateData />
     </>
   );
-
 }
-
-function Layout() {
-  return (
-    <div>
-      {/* A "layout route" is a good place to put markup you want to
-          share across all the pages on your site, like navigation. */}
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-          <li>
-            <Link to="/nothing-here">Nothing Here</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <hr />
-
-      {/* An <Outlet> renders whatever child route is currently active,
-          so you can think about this <Outlet> as a placeholder for
-          the child routes we defined above. */}
-      <Outlet />
-    </div>
-  );
-}
-
 
 function About() {
   return (
@@ -102,6 +144,5 @@ function NoMatch() {
       </p>
     </div>
   );
-
-  }
+}
 export default App;
