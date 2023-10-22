@@ -5,6 +5,7 @@ import TemporaryDrawer from './sideBar';
 import Title from './pages/Title';
 import Data from './pages/Data';
 import Cart from './pages/Cart';
+import CategorySelect from './pages/CategorySelect';
 
 function App() {
   return (
