@@ -2,16 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import TemporaryDrawer from './sideBar';
+import Title from './pages/Title.js'
+import Cart from './pages/Cart.js'
+import Shopping from './pages/shopping.js'
+import Subtotal from './pages/shop2.js'
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-    <App />
-    </BrowserRouter>
+    <Subtotal />
+    <Cart />
   </React.StrictMode>
 );
 
