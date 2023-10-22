@@ -8,3 +8,8 @@ To help simplify this process, WebBud helps calculate your monetary and time bud
 
 
 Created using React in Javascript & CSS.
+
+## Future Features
+
+Add a feature that suggests more ways to be environmentally friendly while wedding planning.
+Integrate firebase as the backend
