@@ -52,7 +52,7 @@ export default function MenuBar(category) {
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <FavoriteIcon />
+                  <FavoriteIcon sx={{ color: 'white' }} />
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -74,7 +74,7 @@ export default function MenuBar(category) {
             >
               <ListItemButton>
                 <ListItemIcon>
-                  <LocalBarIcon />
+                  <LocalBarIcon sx={{ color: 'white' }} />
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -92,7 +92,7 @@ export default function MenuBar(category) {
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <RoomServiceIcon />
+                  <RoomServiceIcon sx={{ color: 'white' }} />
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -110,7 +110,7 @@ export default function MenuBar(category) {
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <LocalFloristIcon />
+                  <LocalFloristIcon sx={{ color: 'white' }} />
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -128,7 +128,7 @@ export default function MenuBar(category) {
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <EmojiTransportationIcon />
+                  <EmojiTransportationIcon sx={{ color: 'white' }} />
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
