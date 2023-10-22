@@ -3,6 +3,7 @@ import logo from './assets/penguin_logo.png';
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import TemporaryDrawer from './sideBar';
 import Title from './pages/Title';
+import Data from './pages/Data';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route index element={<Title />} />
           <Route path="about" element={<About />} />
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="data" element={<Data />} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
@@ -41,6 +43,9 @@ function Layout() {
           </li>
           <li>
             <Link to="/nothing-here">Nothing Here</Link>
+          </li>
+          <li>
+            <Link to="/data">Data</Link>
           </li>
         </ul>
       </nav>

@@ -15,17 +15,7 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// const { palette } = createTheme();
-// const { augmentColor } = palette;
-// const createColor = (mainColor) => augmentColor({ color: { main: mainColor } });
-// const theme = createTheme({
-//   palette: {
-//     buttonColor: createColor('#758467'),
-//     apple: createColor('#5DBA40'),
-//     steelBlue: createColor('#5C76B7'),
-//     violet: createColor('#BC00A3'),
-//   },
-// });
+
 
 
 function Title() {
@@ -37,11 +27,13 @@ function Title() {
             <img src={logo} className="Penguin-logo" alt="logo" /> */}
             <img src={title} className="title" alt="title" />
             <p>
+            <Link to = '/data'>
             <Button
-                onClick={() => {
-                    ShowRemaining();
                 
-                }}
+                // onClick={() => {
+                //     ShowRemaining();
+                    
+                // }}
                 style={{
                     backgroundColor: "#758467"
                 }}
@@ -49,6 +41,7 @@ function Title() {
                 variant = "contained"
                 endIcon = {<KeyboardDoubleArrowRightIcon/>}
             > Get Started </Button>
+            </Link>
             </p>
           </header>
         </div>
@@ -79,82 +72,84 @@ function ShowRemaining() {
     //         setHoursError(true)
     //     }
     // }
-    const element = (
-        <div className="Title">
-          <header className="Title-header">
-            <p>
-            {/* <form noValidate autoComplete = "off" onSubmit={handleSubmit}> */}
-                <p>
-                <h1>
-                    Enter Budget Estimate:    
-                <TextField 
-                    // onChange={(e) => setBudget(e.target.value)}
-                    id="filled-basic" 
-                    label="($1000-)" 
-                    variant="filled" 
-                    required
-                    // error = {budgetError}
-                    /> 
-                </h1>
-                <h1>
-                    Enter Wedding Day:    
-                <TextField 
-                    // onChange={(e) => setDate(e.target.value)}
-                    id="filled-basic" 
-                    label="(MM/DD/YYYY)" 
-                    variant="filled" 
-                    required
-                    // error = {dateError}
-                    />
-                </h1>
-                <h1>
-                    How many hours per week are you willing to spend?    
-                <TextField 
-                    // onChange={(e) => setHours(e.target.value)}
-                    id="filled-basic" 
-                    label="(0-24)" 
-                    variant="filled" 
-                    required
-                    // error = {hoursError}
-                    /> 
-                </h1>
-                </p>
-                <p>
-                <h1>
-                    Choose wedding setting:
-                </h1>
-                <img src={outdoorindoor} className="inoutpic" alt="inoutpic" />
-                </p>
-                <Stack spacing = {60} direction = 'row' justifyContent= "center">
-                <Button
-                    style={{
-                        backgroundColor: "#758467"
-                    }}
-                    // color = "buttonColor"
-                    variant = "contained"
-            > Outdoor </Button>
-            <Button
-                style={{
-                    backgroundColor: "#758467"
-                }}
-                // color = "buttonColor"
-                variant = "contained"
-            > Indoor </Button>
-            </Stack>
-            <Button
-                style={{
-                    backgroundColor: "#758467"
-                }}
-                // color = "buttonColor"
-                variant = "contained"
-                endIcon = {<KeyboardDoubleArrowRightIcon/>}
-            > Done </Button>
-            {/* // </form> */}
-            </p>
-          </header>
-        </div>
-    )
-    root.render(element)
+    // const element = (
+    //     <div className="Title">
+    //       <header className="Title-header">
+    //         <p>
+    //         {/* <form noValidate autoComplete = "off" onSubmit={handleSubmit}> */}
+    //             <p>
+    //             <h1>
+    //                 Enter Budget Estimate:    
+    //             <TextField 
+    //                 // onChange={(e) => setBudget(e.target.value)}
+    //                 id="filled-basic" 
+    //                 label="($1000-)" 
+    //                 variant="filled" 
+    //                 required
+    //                 // error = {budgetError}
+    //                 /> 
+    //             </h1>
+    //             <h1>
+    //                 Enter Wedding Day:    
+    //             <TextField 
+    //                 // onChange={(e) => setDate(e.target.value)}
+    //                 id="filled-basic" 
+    //                 label="(MM/DD/YYYY)" 
+    //                 variant="filled" 
+    //                 required
+    //                 // error = {dateError}
+    //                 />
+    //             </h1>
+    //             <h1>
+    //                 How many hours per week are you willing to spend?    
+    //             <TextField 
+    //                 // onChange={(e) => setHours(e.target.value)}
+    //                 id="filled-basic" 
+    //                 label="(0-24)" 
+    //                 variant="filled" 
+    //                 required
+    //                 // error = {hoursError}
+    //                 /> 
+    //             </h1>
+    //             </p>
+    //             <p>
+    //             <h1>
+    //                 Choose wedding setting:
+    //             </h1>
+    //             <img src={outdoorindoor} className="inoutpic" alt="inoutpic" />
+    //             </p>
+    //             <Stack spacing = {60} direction = 'row' justifyContent= "center">
+    //             <Button
+    //                 style={{
+    //                     backgroundColor: "#758467"
+    //                 }}
+    //                 // color = "buttonColor"
+    //                 variant = "contained"
+    //         > Outdoor </Button>
+    //         <Button
+    //             style={{
+    //                 backgroundColor: "#758467"
+    //             }}
+    //             // color = "buttonColor"
+    //             variant = "contained"
+    //         > Indoor </Button>
+    //         </Stack>
+    //         <Link to = "/about">
+    //         <Button
+    //             style={{
+    //                 backgroundColor: "#758467"
+    //             }}
+    //             // color = "buttonColor"
+    //             variant = "contained"
+    //             endIcon = {<KeyboardDoubleArrowRightIcon/>}
+    //         > Done </Button>
+    //         </Link>
+    //         {/* // </form> */}
+    //         </p>
+    //       </header>
+    //     </div>
+    // )
+    // root.render(element)
 }
 
 export default Title;
