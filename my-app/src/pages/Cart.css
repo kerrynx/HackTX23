@@ -11,6 +11,7 @@
 
 .Cart-header{
     font-family:"Bentham";
+    font-size: calc(8px + 2vmin);
     color: rgb(255, 255, 255);
 }
 
