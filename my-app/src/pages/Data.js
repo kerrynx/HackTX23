@@ -48,6 +48,12 @@ function Data(){
                 <TextField 
                     sx={{
                         input: {color: "#FFFFFF"},
+                        width: 100
+                    }}
+                    InputProps={{
+                        inputProps: { 
+                            min: 1000
+                        }
                     }}
                     value ={budget}
                     onChange={(e) => setBudget(e.target.value)}
@@ -87,7 +93,13 @@ function Data(){
                     </h1>  
                 <TextField 
                     sx={{
-                        input: {color: "#FFFFFF"}
+                        input: {color: "#FFFFFF"},
+                        width: 75
+                    }}
+                    InputProps={{
+                        inputProps: { 
+                            max: 24, min: 0
+                        }
                     }}
                     value ={hours}
                     onChange={(e) => setHours(e.target.value)}
