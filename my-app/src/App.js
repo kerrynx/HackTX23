@@ -1,8 +1,11 @@
 import './App.css';
 import logo from './assets/penguin_logo.png';
-import { Routes, Route, Outlet, Link } from "react-router-dom";
-import TemporaryDrawer from './sideBar';
+import { Routes, Route, Outlet, Link, useParams } from "react-router-dom";
+import TemporaryDrawer from './components/sideBar';
 import Title from './pages/Title';
+import MenuBar from './components/TopBar';
+import * as React from 'react';
+import data from './data/item_data.json'
 
 function App() {
   return (
@@ -12,6 +15,7 @@ function App() {
           <Route index element={<Title />} />
           <Route path="about" element={<About />} />
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="Categories/:id" element={<Category />} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
@@ -21,6 +25,23 @@ function App() {
       </Routes>
     </div>
   );
+}
+
+function Category(){
+  let {id} = useParams();
+  const categories = ["Ceremony","CocktailHour", "Getaway", "TableDecor", "WeddingReception"];
+  if(!categories.includes(id)){
+    return(<NoMatch/>);
+  }
+  const itemData = data
+  
+  return (
+
+  
+    <MenuBar id ={id}/>
+    </>
+  );
+
 }
 
 function Layout() {
