@@ -35,11 +35,11 @@ export default function TemporaryDrawer() {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
-      style = {{backgroundColor: '#9caf88'}}
+      style = {{backgroundColor: '#758467'}}
     >
-      <List style = {{backgroundColor: '#9caf88'}}>
+      <List style = {{backgroundColor: '#758467'}}>
         {['Ceremony'].map((text) => (
-          <Link to="/shop" style = {{ color: 'black', textDecoration: 'none'}}>
+          <Link to="/shop" style = {{ color: 'white', textDecoration: 'none'}}>
             <ListItem key={text}disablePadding>            
                 <ListItemButton>
                     <ListItemIcon>
@@ -52,10 +52,10 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <List style = {{backgroundColor: '#9caf88'}} >
+      <List style = {{backgroundColor: '#758467'}} >
         {['Cocktail Hour'].map((text) => (
-          <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
-            <ListItem key={text}disablePadding style = {{backgroundColor: '#9caf88'}}>
+          <Link to="/about" style = {{ color: 'white', textDecoration: 'none'}}>
+            <ListItem key={text}disablePadding style = {{backgroundColor: '#758467'}}>
                 <ListItemButton>
                     <ListItemIcon>
                         <LocalBarIcon /> 
@@ -67,9 +67,9 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <List style = {{backgroundColor: '#9caf88'}}>
+      <List style = {{backgroundColor: '#758467'}}>
         {['Wedding Reception'].map((text) => (
-          <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
+          <Link to="/about" style = {{ color: 'white', textDecoration: 'none'}}>
             <ListItem key={text} disablePadding>
                 <ListItemButton>
                     <ListItemIcon>
@@ -82,9 +82,9 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <List style = {{backgroundColor: '#9caf88'}}>
+      <List style = {{backgroundColor: '#758467'}}>
         {['Table Decor'].map((text) => (
-          <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
+          <Link to="/about" style = {{ color: 'white', textDecoration: 'none'}}>
             <ListItem key={text} disablePadding>
                 <ListItemButton>
                     <ListItemIcon>
@@ -97,9 +97,9 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <List style = {{backgroundColor: '#9caf88'}}>
+      <List style = {{backgroundColor: '#758467'}}>
         {['Getaway'].map((text) => (
-          <Link to="/about" style = {{ color: 'black', textDecoration: 'none'}}>
+          <Link to="/about" style = {{ color: 'white', textDecoration: 'none'}}>
             <ListItem key={text} disablePadding>
                 <ListItemButton>
                     <ListItemIcon>
@@ -127,7 +127,7 @@ export default function TemporaryDrawer() {
             onClose={toggleDrawer(anchor, false)}
             PaperProps={{
                 sx: {
-                backgroundColor: "#9caf88"
+                backgroundColor: "#758467"
                 }
             }}>
             {list(anchor)}

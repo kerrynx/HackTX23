@@ -41,13 +41,13 @@ export default function MenuBar(category) {
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
-      style={{ backgroundColor: "#9caf88" }}
+      style={{ backgroundColor: "#758467" }}
     >
-      <List style={{ backgroundColor: "#9caf88" }}>
+      <List style={{ backgroundColor: "#758467" }}>
         {["Ceremony"].map((text) => (
           <Link
             to="/Categories/Ceremony"
-            style={{ color: "black", textDecoration: "none" }}
+            style={{ color: "white", textDecoration: "none" }}
           >
             <ListItem key={text} disablePadding>
               <ListItemButton>
@@ -61,16 +61,16 @@ export default function MenuBar(category) {
         ))}
       </List>
       <Divider />
-      <List style={{ backgroundColor: "#9caf88" }}>
+      <List style={{ backgroundColor: "#758467" }}>
         {["Cocktail Hour"].map((text) => (
           <Link
             to="/Categories/CocktailHour"
-            style={{ color: "black", textDecoration: "none" }}
+            style={{ color: "white", textDecoration: "none" }}
           >
             <ListItem
               key={text}
               disablePadding
-              style={{ backgroundColor: "#9caf88" }}
+              style={{ backgroundColor: "#758467" }}
             >
               <ListItemButton>
                 <ListItemIcon>
@@ -83,11 +83,11 @@ export default function MenuBar(category) {
         ))}
       </List>
       <Divider />
-      <List style={{ backgroundColor: "#9caf88" }}>
+      <List style={{ backgroundColor: "#758467" }}>
         {["Wedding Reception"].map((text) => (
           <Link
             to="/Categories/WeddingReception"
-            style={{ color: "black", textDecoration: "none" }}
+            style={{ color: "white", textDecoration: "none" }}
           >
             <ListItem key={text} disablePadding>
               <ListItemButton>
@@ -101,11 +101,11 @@ export default function MenuBar(category) {
         ))}
       </List>
       <Divider />
-      <List style={{ backgroundColor: "#9caf88" }}>
+      <List style={{ backgroundColor: "#758467" }}>
         {["Table Decor"].map((text) => (
           <Link
             to="/Categories/TableDecor"
-            style={{ color: "black", textDecoration: "none" }}
+            style={{ color: "white", textDecoration: "none" }}
           >
             <ListItem key={text} disablePadding>
               <ListItemButton>
@@ -119,11 +119,11 @@ export default function MenuBar(category) {
         ))}
       </List>
       <Divider />
-      <List style={{ backgroundColor: "#9caf88" }}>
+      <List style={{ backgroundColor: "#758467" }}>
         {["Getaway"].map((text) => (
           <Link
             to="/Categories/Getaway"
-            style={{ color: "black", textDecoration: "none" }}
+            style={{ color: "white", textDecoration: "none" }}
           >
             <ListItem key={text} disablePadding>
               <ListItemButton>
@@ -166,7 +166,7 @@ export default function MenuBar(category) {
         onClose={toggleDrawer(false)}
         PaperProps={{
           sx: {
-            backgroundColor: "#9caf88",
+            backgroundColor: "#758467",
           },
         }}
       >
