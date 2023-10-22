@@ -12,17 +12,17 @@ import RoomServiceIcon from "@mui/icons-material/RoomService"; //reception
 import EmojiTransportationIcon from "@mui/icons-material/EmojiTransportation"; //sendoff
 import LocalFloristIcon from "@mui/icons-material/LocalFlorist"; //table decor
 import FavoriteIcon from "@mui/icons-material/Favorite"; //ceremony
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import rings from "../assets/wedding_bands.png";
+import { Container } from "@mui/system";
 export default function MenuBar(category) {
-  const [state, setState] = React.useState({
-    left: false,
-  });
+  const [state, setState] = React.useState(false);
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -155,9 +155,38 @@ export default function MenuBar(category) {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              <p>{category.id}</p>
+
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{
+                flexGrow: 1,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {category.id}
             </Typography>
+            <Link to="/cart">
+              <IconButton
+                size="medium"
+                edge="start"
+                color="inherit"
+                aria-label="shop"
+                sx={{ mr: 2 }}
+              >
+                <Box
+                  component="img"
+                  alt="wedding bands"
+                  sx={{
+                    height: 50,
+                    width: 50,
+                  }}
+                  src={rings}
+                />
+              </IconButton>
+            </Link>
           </Toolbar>
         </AppBar>
       </Box>

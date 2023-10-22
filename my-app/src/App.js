@@ -1,20 +1,23 @@
 import "./App.css";
+import "./index.css";
 import { Routes, Route, Outlet, Link, useParams } from "react-router-dom";
 import TemporaryDrawer from "./components/sideBar";
 import Title from "./pages/Title";
 import MenuBar from "./components/TopBar";
 import * as React from "react";
 import data from "./data/item_data.json";
+import Shop from "./pages/Cart.js";
 import { Card } from "@mui/material";
 import { CardContent } from "@mui/material";
 import { Typography } from "@mui/material";
 import { CardActions } from "@mui/material";
 import { Button } from "@mui/base";
 import { Grid } from "@mui/material";
+import { Box } from "@mui/system";
 
 function App() {
   return (
-    <div className="App">
+    <div className="default">
       <Routes>
         <Route path="/">
           <Route
@@ -26,6 +29,15 @@ function App() {
               </>
             }
           />
+          <Route
+            path="/cart"
+            element={
+              <>
+                <TemporaryDrawer />
+                <Shop />
+              </>
+            }
+          />
           <Route path="Categories/:id" element={<Category />} />
 
           {/* Using path="*"" means "match anything", so this route
@@ -34,6 +46,7 @@ function App() {
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
+      <Box sx={{ bgcolor: "#9caf88", height: "100vh" }} />
     </div>
   );
 }
@@ -63,8 +76,8 @@ function Category() {
     return sortedData.map((data) => (
       <>
         <Grid container justifyContent="center" spacing={3}>
-          <Grid item xs={3}>
-            <Card>
+          <Grid item xs={4} sx={{ margin: "8px" }}>
+            <Card className="diyElements">
               {/* <CardMedia
               sx={{ height: 140 }}
             image="/static/images/cards/contemplative-reptile.jpg"
@@ -83,11 +96,11 @@ function Category() {
               </CardActions>
             </Card>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={2}>
             <div>xs=8</div>
           </Grid>
-          <Grid item xs={3}>
-            <Card>
+          <Grid item xs={4} sx={{ margin: "8px" }}>
+            <Card className="buyElements">
               {/* <CardMedia
         sx={{ height: 140 }}
         image="/static/images/cards/contemplative-reptile.jpg"
