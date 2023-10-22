@@ -20,6 +20,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 // import Shop from './pages/Shop';
+import CategorySelect from "./pages/CategorySelect";
+import Bentham from "./fonts/Bentham-Regular.ttf";
 
 function App() {
   return (

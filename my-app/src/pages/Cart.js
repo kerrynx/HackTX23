@@ -38,10 +38,8 @@ function Cart() {
   const invoiceTotal = (subtotal(rows) + subtotal(diyRows)) * (1 + TAX_RATE);
 
   return (
-    <>
-      <MenuBar id="" />
-
-      <body>
+    <body>
+      <header className="Cart-header">
         <div className="Cart" style={{ backgroundColor: "#9CAF88" }}>
           <div className="remaining_rings">
             <Container maxWidth="sm">
@@ -51,7 +49,8 @@ function Cart() {
                   variant="h3"
                   component="h1"
                   gutterBottom
-                  padding="40px"
+                  padding="20px"
+                  sx={{ fontFamily: "Bentham", color: "white" }}
                 >
                   Remaining
                 </Typography>
@@ -60,7 +59,9 @@ function Cart() {
 
             <div class="row">
               <div className="column" id="diy-section">
-                <h2 align="center">Time</h2>
+                <h2 align="center" color="white">
+                  Time
+                </h2>
                 <img
                   src={
                     "https://quickchart.io/chart?w=300&c=%7B%0A%20%20type%3A%20%27doughnut%27%2C%0A%20%20data%3A%20%7B%0A%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20data%3A%20%5B50%2C%2060%5D%2C%0A%20%20%20%20%20%20backgroundColor%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%27rgb(255%2C%20216%2C%20123)%27%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%27rgb(255%2C%20237%2C%20195)%27%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%7D%5D%0A%20%20%7D%0A%7D%0A"
@@ -74,7 +75,12 @@ function Cart() {
                 {CategoryTable(0)}
               </div>
               <div className="column" id="buy-section">
-                <h2 align="center">Balance</h2>
+                <h2
+                  align="center"
+                  sx={{ fontFamily: "Bentham", color: "white" }}
+                >
+                  Balance
+                </h2>
                 <img
                   src={
                     "https://quickchart.io/chart?w=300&c=%7B%0A%20%20type%3A%20%27doughnut%27%2C%0A%20%20data%3A%20%7B%0A%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20data%3A%20%5B70%2C%2060%5D%2C%0A%20%20%20%20%20%20backgroundColor%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%27rgb(255%2C%20216%2C%20123)%27%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%27rgb(255%2C%20237%2C%20195)%27%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%7D%5D%0A%20%20%7D%0A%7D%0A"
@@ -98,6 +104,7 @@ function Cart() {
                   variant="h5"
                   component="h2"
                   gutterBottom
+                  sx={{ fontFamily: "Bentham", color: "white" }}
                 >
                   TOTAL: $ {invoiceTotal.toFixed(2)}
                 </Typography>
@@ -105,8 +112,8 @@ function Cart() {
             </Container>
           </div>
         </div>
-      </body>
-    </>
+      </header>
+    </body>
   );
 }
 

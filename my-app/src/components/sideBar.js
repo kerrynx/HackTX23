@@ -36,18 +36,18 @@ export default function TemporaryDrawer() {
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
-      style={{ backgroundColor: "#9caf88" }}
+      style={{ backgroundColor: "#758467" }}
     >
-      <List style={{ backgroundColor: "#9caf88" }}>
+      <List style={{ backgroundColor: "#758467" }}>
         {["Ceremony"].map((text) => (
           <Link
             to="/Categories/Ceremony"
-            style={{ color: "black", textDecoration: "none" }}
+            style={{ color: "white", textDecoration: "none" }}
           >
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <FavoriteIcon />
+                  <FavoriteIcon sx={{ color: "white" }} />
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -56,20 +56,20 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <List style={{ backgroundColor: "#9caf88" }}>
+      <List style={{ backgroundColor: "#758467" }}>
         {["Cocktail Hour"].map((text) => (
           <Link
             to="/Categories/CocktailHour"
-            style={{ color: "black", textDecoration: "none" }}
+            style={{ color: "white", textDecoration: "none" }}
           >
             <ListItem
               key={text}
               disablePadding
-              style={{ backgroundColor: "#9caf88" }}
+              style={{ backgroundColor: "#758467" }}
             >
               <ListItemButton>
                 <ListItemIcon>
-                  <LocalBarIcon />
+                  <LocalBarIcon sx={{ color: "white" }} />
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -78,16 +78,16 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <List style={{ backgroundColor: "#9caf88" }}>
+      <List style={{ backgroundColor: "#758467" }}>
         {["Wedding Reception"].map((text) => (
           <Link
             to="/Categories/WeddingReception"
-            style={{ color: "black", textDecoration: "none" }}
+            style={{ color: "white", textDecoration: "none" }}
           >
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <RoomServiceIcon />
+                  <RoomServiceIcon sx={{ color: "white" }} />
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -96,16 +96,16 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <List style={{ backgroundColor: "#9caf88" }}>
+      <List style={{ backgroundColor: "#758467" }}>
         {["Table Decor"].map((text) => (
           <Link
             to="/Categories/TableDecor"
-            style={{ color: "black", textDecoration: "none" }}
+            style={{ color: "white", textDecoration: "none" }}
           >
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <LocalFloristIcon />
+                  <LocalFloristIcon sx={{ color: "white" }} />
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -114,16 +114,16 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <List style={{ backgroundColor: "#9caf88" }}>
+      <List style={{ backgroundColor: "#758467" }}>
         {["Getaway"].map((text) => (
           <Link
             to="/Categories/Getaway"
-            style={{ color: "black", textDecoration: "none" }}
+            style={{ color: "white", textDecoration: "none" }}
           >
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <EmojiTransportationIcon />
+                  <EmojiTransportationIcon sx={{ color: "white" }} />
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -151,7 +151,7 @@ export default function TemporaryDrawer() {
         onClose={toggleDrawer(false)}
         PaperProps={{
           sx: {
-            backgroundColor: "#9caf88",
+            backgroundColor: "#758467",
           },
         }}
       >

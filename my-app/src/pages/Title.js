@@ -18,6 +18,7 @@ function Title() {
             <Button
               style={{
                 backgroundColor: "#758467",
+                fontFamily: "Bentham",
               }}
               variant="contained"
               endIcon={<KeyboardDoubleArrowRightIcon />}
