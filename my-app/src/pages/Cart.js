@@ -54,7 +54,7 @@ function Cart() {
         
         <Container maxWidth="sm">
         <Box sx={{ my: 5 }}>
-            <Typography align = "center" variant="h3" component="h1" gutterBottom padding='40px' sx={{ fontFamily: 'Bentham', color: 'white' }}>
+            <Typography align = "center" variant="h3" component="h1" gutterBottom padding='20px' sx={{ fontFamily: 'Bentham', color: 'white' }}>
                 Remaining
             </Typography>
         </Box>
