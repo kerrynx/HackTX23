@@ -76,6 +76,7 @@ function Category() {
   return <GenerateCategoryPage id={id} />;
 }
 function GenerateCategoryPage(category) {
+  let reload = false;
   const [imageZeroSources, setImageZeroSources] = useState([]);
 
   const [imageOneSources, setImageOneSources] = useState([]);
@@ -124,37 +125,45 @@ function GenerateCategoryPage(category) {
     return materials;
   };
 
-  useEffect(() => {
-    sortedData.forEach((data) => {
-      import(process.env.PUBLIC_URL + data[1].url)
-        .then((image) => {
-          setImageOneSources((prevImageSources) => [
-            ...prevImageSources,
-            image.default,
-          ]);
-        })
-        .catch((error) => {
-          console.error("Error loading image:", error);
-        });
-    });
-  }, [sortedData]);
-  useEffect(() => {
-    sortedData.forEach((data) => {
-      import(process.env.PUBLIC_URL + data[0].url)
-        .then((image) => {
-          setImageZeroSources((prevImageSources) => [
-            ...prevImageSources,
-            image.default,
-          ]);
-        })
-        .catch((error) => {
-          console.error("Error loading image:", error);
-        });
-    });
-  }, [sortedData]);
+  useEffect(
+    () => {
+      sortedData.forEach((data) => {
+        import(process.env.PUBLIC_URL + data[1].url)
+          .then((image) => {
+            setImageOneSources((prevImageSources) => [
+              ...prevImageSources,
+              image.default,
+            ]);
+          })
+          .catch((error) => {
+            console.error("Error loading image:", error);
+          });
+      });
+    },
+    [sortedData],
+    reload
+  );
+  useEffect(
+    () => {
+      sortedData.forEach((data) => {
+        import(process.env.PUBLIC_URL + data[0].url)
+          .then((image) => {
+            setImageZeroSources((prevImageSources) => [
+              ...prevImageSources,
+              image.default,
+            ]);
+          })
+          .catch((error) => {
+            console.error("Error loading image:", error);
+          });
+      });
+    },
+    [sortedData],
+    reload
+  );
+
   const GenerateData = () => {
-    let i = 0;
-    return sortedData.map((data) => (
+    return sortedData.map((data, i) => (
       <>
         <Grid container justifyContent="center" alignItems="center" spacing={3}>
           <Grid item xs={4} sx={{ margin: "8px" }}>
@@ -217,19 +226,19 @@ function GenerateCategoryPage(category) {
             </Card>
           </Grid>
         </Grid>
-        {(i += 2)}
       </>
     ));
   };
-  if ((category = "CocktailHour")) {
+  if (category === "CocktailHour") {
     category = "Cocktail Hour";
-  }
-  if ((category = "TableDecor")) {
+  } else if (category === "TableDecor") {
     category = "Table Decor";
-  }
-  if ((category = "WeddingReception")) {
+  } else if (category === "WeddingReception") {
     category = "Wedding Reception";
+  } else {
+    category = category.id;
   }
+
   return (
     <>
       <MenuBar id={category} />
