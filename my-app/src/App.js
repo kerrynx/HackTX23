@@ -13,6 +13,7 @@ import { Button } from "@mui/base";
 import { Grid } from "@mui/material";
 import Data from './pages/Data';
 import Cart from './pages/Cart';
+import Shop from './pages/Shop';
 import CategorySelect from './pages/CategorySelect';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/data" element={<Data />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="Categories/:id" element={<Category />} />
+          <Route path="shop" element = {<Shop />} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
