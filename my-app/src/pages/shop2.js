@@ -60,31 +60,32 @@ export default function CategoryTable(cat_num) {
   return (
     <body>
     <TableContainer className = 'Cart' component={Paper} style={{backgroundColor:'#9CAF88', color: 'white',}}  >
-      <Table sx={{ minWidth: 700 }} aria-label="spanning table">
+      <Table sx={{ minWidth: 700, fontFamily: 'Bentham' }} aria-label="spanning table">
         <TableHead>
           <TableRow>
-            <TableCell colSpan={3}>
+            <TableCell colSpan={3} sx={{ fontFamily: 'Bentham', color: 'white' }}>
+                
                 ITEM
             </TableCell>
-            <TableCell align="right">PRICE</TableCell>
+            <TableCell align="right" sx={{ fontFamily: 'Bentham', color: 'white' }}>PRICE</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.Category}>
-              <TableCell>{row.Category}</TableCell>
-              <TableCell align="right" colSpan = {3}>{ccyFormat(row.price)}</TableCell>
+              <TableCell sx={{ fontFamily: 'Bentham', color: 'white' }}>{row.Category}</TableCell>
+              <TableCell align="right" colSpan = {3} sx={{ fontFamily: 'Bentham', color: 'white' }}>{ccyFormat(row.price)}</TableCell>
             </TableRow>
           ))}
           <TableRow>
             <TableCell rowSpan={3} />
-            <TableCell colSpan={2}>{cat} SUBTOTAL:</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceSubtotal)}</TableCell>
+            <TableCell colSpan={2} sx={{ fontFamily: 'Bentham', color: 'white' }}>{cat} SUBTOTAL:</TableCell>
+            <TableCell align="right" sx={{ fontFamily: 'Bentham', color: 'white' }}>{ccyFormat(invoiceSubtotal)}</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>TAXES:</TableCell>
-            <TableCell align="right">{`${(TAX_RATE * 100).toFixed(0)} %`}</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceTaxes)}</TableCell>
+            <TableCell sx={{ fontFamily: 'Bentham', color: 'white' }}>TAXES:</TableCell>
+            <TableCell align="right" sx={{ fontFamily: 'Bentham', color: 'white' }}>{`${(TAX_RATE * 100).toFixed(0)} %`}</TableCell>
+            <TableCell align="right" sx={{ fontFamily: 'Bentham', color: 'white' }}>{ccyFormat(invoiceTaxes)}</TableCell>
           </TableRow>
         </TableBody>
       </Table>

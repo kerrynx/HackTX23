@@ -48,7 +48,8 @@ function Data(){
                 <TextField 
                     sx={{
                         input: {color: "#FFFFFF"},
-                        width: 100
+                        width: 100,
+                        fontFamily: 'Bentham'
                     }}
                     InputProps={{
                         inputProps: { 
@@ -73,7 +74,8 @@ function Data(){
                     </h1> 
                 <TextField 
                     sx={{
-                        input: {color: "#FFFFFF"}
+                        input: {color: "#FFFFFF"},
+                        fontFamily: 'Bentham'
                     }}
                     value ={date}
                     onChange={(e) => setDate(e.target.value)}
@@ -94,8 +96,10 @@ function Data(){
                 <TextField 
                     sx={{
                         input: {color: "#FFFFFF"},
-                        width: 80
+                        width: 80,
+                        fontFamily: 'Bentham'
                     }}
+                    
                     InputProps={{
                         inputProps: { 
                             max: 24, min: 0
@@ -123,12 +127,18 @@ function Data(){
                     style={{
                         backgroundColor: "#758467"
                     }}
+                    sx={{
+                        fontFamily: 'Bentham',
+                      }}
                     variant = "contained"
                 > Outdoor </Button>
                 <Button
                     style={{
                         backgroundColor: "#758467"
                     }}
+                    sx={{
+                        fontFamily: 'Bentham',
+                      }}
                     variant = "contained"
                 > Indoor </Button>
             </Stack>
@@ -137,6 +147,9 @@ function Data(){
                 style={{
                     backgroundColor: "#758467"
                 }}
+                sx={{
+                    fontFamily: 'Bentham',
+                  }}
                 variant = "contained"
                 endIcon = {<KeyboardDoubleArrowRightIcon/>}
             > Done </Button>

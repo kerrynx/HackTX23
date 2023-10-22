@@ -18,7 +18,8 @@ function Title() {
             <Link to = "/data">
             <Button
                 style={{
-                    backgroundColor: "#758467"
+                    backgroundColor: "#758467",
+                    fontFamily: 'Bentham'
                 }}
                 variant = "contained"
                 endIcon = {<KeyboardDoubleArrowRightIcon/>}

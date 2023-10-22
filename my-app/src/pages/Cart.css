@@ -1,10 +1,17 @@
 .container {
     background-color: #9CAF88;
-    font-family: "Times New Roman";
+    font-family: "Bentham";
+    color: 'white'
 }
 
 .Cart {
-    font-family: "Times New Roman";
+    font-family: "Bentham";
+    color: 'white'
+}
+
+.Cart-header{
+    font-family:"Bentham";
+    color: rgb(255, 255, 255);
 }
 
 .row {

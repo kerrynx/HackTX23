@@ -8,7 +8,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+    font-family: 'Bentham';
+    src: local('Bentham'), url(./fonts/Bentham-Regular.ttf) format('ttf');
+}
+@font-face {
+    font-family: 'Waterfall';
+    src: local('Waterfall'), url(./fonts/Waterfall-Regular.ttf) format('ttf');
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    monospace, 'Bentham', 'Waterfall'
+
+    /* @font-face {
+        font-family: 'MyFont';
+        src: local('MyFont'), url(./fonts/MyFont.woff) format('woff');
+        /* other formats include: 'woff2', 'truetype, 'opentype',
+                                  'embedded-opentype', and 'svg' 
+      } */
 }
+
+
