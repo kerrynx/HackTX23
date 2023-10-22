@@ -68,7 +68,7 @@ function Cart() {
             </div>
             <div className="column" id="buy-section">
             <h2 align = "center">Balance</h2>
-            <img src={"https://quickchart.io/chart?w=300&c=%7B%0A%20%20type%3A%20%27doughnut%27%2C%0A%20%20data%3A%20%7B%0A%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20data%3A%20%5B50%2C%2060%5D%2C%0A%20%20%20%20%20%20backgroundColor%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%27rgb(255%2C%20216%2C%20123)%27%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%27rgb(255%2C%20237%2C%20195)%27%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%7D%5D%0A%20%20%7D%0A%7D%0A"} className="Money-Chart" alt="money" />
+            <img src={"https://quickchart.io/chart?w=300&c=%7B%0A%20%20type%3A%20%27doughnut%27%2C%0A%20%20data%3A%20%7B%0A%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20data%3A%20%5B70%2C%2060%5D%2C%0A%20%20%20%20%20%20backgroundColor%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%27rgb(255%2C%20216%2C%20123)%27%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%27rgb(255%2C%20237%2C%20195)%27%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%7D%5D%0A%20%20%7D%0A%7D%0A"} className="Money-Chart" alt="money" />
             <h2 align = "center" padding='80px'>Buy</h2>
                 {CategoryTable(1)}
             </div>
